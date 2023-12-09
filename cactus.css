@@ -1,0 +1,107 @@
+html{
+    cursor: url("leaf.png"), auto;
+}
+
+body{
+    cursor: url("leaf.png"), auto;
+    font-family: 'IBM Plex Serif';
+    color: rgb(0, 52, 24);
+    background-color: #E6FFDE;
+    position: relative;
+}
+
+body a{
+    text-decoration: none;
+    color: rgb(0, 52, 24);
+}
+
+.head{
+    display: flex;
+    justify-content: space-around;
+}
+
+.siteName{
+    font-size: 40px;
+}
+
+.intro{
+    font-size: 20px;
+}
+
+.intro p {
+    margin-right: 350px;
+}
+
+.mainPlant{
+    float: right;
+}
+
+.mainPlantReverse{
+    float: left;
+}
+
+nav{
+    position: sticky;
+    top: 0px;
+    background-color:rgb(69, 196, 114);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 100%;
+    gap: 10px;
+    font-size: 2rem;
+    padding: 0.5rem;
+}
+nav a{
+    border-style: dashed;
+    border-color: rgba(69, 196, 114,0);
+}
+
+nav a:hover{
+    background-color: rgb(117, 231, 157);
+    border-color: rgba(69, 196, 114,100);
+}
+
+footer{
+    background-color: rgb(117, 231, 157);
+    width: 100%;
+    position: absolute;
+    left: 0;
+    height: 60px;
+    bottom: -8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+}
+
+.right{
+    display: flex;
+    flex-direction: row;
+    gap: 60px;
+    margin-right: 5%;
+}
+
+.left{
+    margin-left: 5%;
+}
+
+.typeList{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-width: 3px;
+    border-color: rgb(69, 196, 114);
+    background-color: rgb(69, 196, 114);
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    font-size: 25px;
+    z-index: 2;
+    opacity: 0;
+}
+
+.gimno{
+    margin-top: 70px;
+}
