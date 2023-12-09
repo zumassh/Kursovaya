@@ -113,3 +113,30 @@ footer{
 .bonsai{
     margin-top: 7%;
 }
+
+@media (max-width: 800px){
+    nav{
+        opacity: 0;
+        display: none;
+    }
+    /*что-то сделать с nav*/
+    footer{
+        bottom: -2%;
+    }
+}
+
+@media (max-width: 500px){
+    footer{
+        flex-direction: column;
+        height: fit-content;
+    }
+
+    .left{
+        margin-bottom: 1em;
+    }
+
+    .right{
+       flex-direction: column;
+       gap: 10px; 
+    }
+}
