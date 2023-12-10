@@ -40,10 +40,13 @@ body a{
     top: -2%;
     right: 15%;
 }
-
+.navigation{
+    position: sticky;
+    top: 0;
+}
 nav{
     position: sticky;
-    top: 0px;
+    top: 0;
     margin-top: 2%;
     background-color:rgb(69, 196, 114);
     display: flex;
@@ -133,7 +136,7 @@ footer{
 
 .typeList{
     position: absolute;
-    display: flex;
+    display: none;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -143,6 +146,7 @@ footer{
     border-bottom-left-radius: 40px;
     border-bottom-right-radius: 40px;
     font-size: 25px;
+    top: 100%;
     z-index: 2;
     opacity: 0;
 }
@@ -154,6 +158,9 @@ footer{
     margin: 1px;
     background-color: rgb(135, 237, 171);
 }
+.menu{
+    display: none;
+}
 
 @media (max-width: 1300px){
     .liana1, .liana2{
@@ -163,10 +170,57 @@ footer{
 }
 
 @media (max-width: 800px){
-    nav{
-        opacity: 0;
-        display: none;
+    body{
+        position: relative;
+        margin-right: 0;
     }
+    nav{
+        position: fixed;
+        height: 100vh;
+        background-color: rgb(117, 231, 157);
+        width: 200px;
+        margin-top: 0;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        transform: translateX(230px);
+        transition: transform .5s ease-in-out;
+    }
+    .typeList{
+        position: fixed;
+        background-color: rgb(69, 196, 114);
+        width: 200px;
+        margin-top: 0;
+        padding: 10px;
+        display: none;
+        flex-direction: column;
+        top:33%;
+        transition: transform .5s ease-in-out;
+    }
+    .navigation{
+        position: relative;
+        
+    }
+    .menu{
+        display: block;
+        transition: transform .5s ease-in-out;
+        position: fixed;
+        top: 0;
+        right: 2%;
+    }
+    
+    nav.active{
+        transform: translateX(0);
+    }
+    .menu.active{
+        transform: translateX(-220px);
+    }
+    .navigation{
+        position: relative;
+        display: flex;
+        justify-content: flex-end;
+    }
+   
     /*что-то сделать с nav*/
     footer{
         bottom: -2%;
